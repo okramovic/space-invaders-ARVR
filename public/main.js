@@ -1,9 +1,18 @@
 let   level = 1
-let   playerLife = 100
+let   playerLife = 100        // untis: percent
 const enemiesLimit     = 20
 let   enemiesGenerated =  0
 let   enemiesKilled    =  0
 let   enemies = []
+
+
+document.addEventListener('DOMContentLoaded',()=>{
+
+    setTimeout(startNewGame, 2000)
+  
+    if (level === 1) document.querySelector('a-sky').setAttribute('src','https://cdn.glitch.com/75a4acdf-fba3-4264-8ea8-b58e00438448%2Fsky.jpeg?1519054480736')
+  
+})
 
 
 function startNewGame(){
@@ -21,13 +30,8 @@ function startNewGame(){
 
 
 function addNewEnemy(){
-  
-      let en = new Enemy()
-      /*en.addEventListener('enemyHitPlayer',(ev)=>{
-          console.log('ENEMY HIT PLAYER')
-      })*/
-  
-      enemies.push(en)
+        
+      enemies.push(new Enemy())
       //enemiesGenerated ++
 }
 
@@ -36,13 +40,13 @@ function addNewEnemy(){
 function updatePlayerLife(toAdd){
   
       playerLife += toAdd*20
-      console.log('playerLife',playerLife)
   
       if (playerLife <= 0) {
-          if (confirm('they pewed you\n\n*  game over :(  *\n\n  new game?')===true){
+        
+          if (confirm('they pewed you\n\n*  game over :(  *\n\n  new game?') === true )
             
                   startNewGame()
-          }
+          
         
       } else {
         
@@ -69,18 +73,11 @@ function checkEnemiesKilled(){
               
               
                 setTimeout(()=>{
+                    // this has to be changed to go to next level
+                  
                     if (confirm('~ you saved the Earth ~\n\n\n? new game ?')===true) return startNewGame()
+                  
                 },1000)
                 
         }
 }
-
-
-
-document.addEventListener('DOMContentLoaded',()=>{
-
-    setTimeout(startNewGame, 2000)
-  
-    if (level === 1) document.querySelector('a-sky').setAttribute('src','https://cdn.glitch.com/75a4acdf-fba3-4264-8ea8-b58e00438448%2Fsky.jpeg?1519054480736')
-  
-})

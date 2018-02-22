@@ -1,3 +1,5 @@
+// we dont need this file anymore - see hitCheck.js script
+
 // This interval loops every 1 second and queries the position of all the <a-box> elements 
 // let pos;
 

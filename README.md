@@ -4,7 +4,7 @@
 #### This time they came for real... Use your smartphone to save the Earth
 
 
-Project started at [Coder Dojo Vienna Hackathon](https://www.eventbrite.de/e/coderdojo-wien-hackathon-at-microsoft-tickets-41918976788) by Marko Bogdanovic and Vlad Petrea
+Project started at [Coder Dojo Vienna Hackathon](https://www.eventbrite.de/e/coderdojo-wien-hackathon-at-microsoft-tickets-41918976788) by [Marko Bogdanovic](https://github.com/okramovic) and Vlad Petrea
 
 Our aim was to come up with fun project for CoderDojo children that would encourage them to learn developing Virtual Reality games using very good open-source webVR library [A-frame](https://aframe.io/).
 We hacked it a bit to be able to fake Augmented Reality app.

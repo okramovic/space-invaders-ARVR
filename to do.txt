@@ -1,38 +1,26 @@
 Functionality issues:
         
       
-2) touch function is still not yet available (working on it - ideally, it should work like this website: https://testimony.site/room)
+2) touch function (shooting) is still not yet available (working on it - ideally, it should work like this website: https://testimony.site/room)
       
 4) a query at the very beginning to find out whether the page is being opened on a mobile device or PC(if desktop, use sky, if mobile, use camera feed instead of sky)
     # i think id leave this for you - its quite useful skill, to set page layouts or other things according to detected display properties. (even though here its not a page layout to be set..)
     
     -ok  ## also you can query just screen/viewport width or height
-    
-        
-
-7) if player doesnt shoot the cube that gets close to him, we have bug - game never ends because he cant shoot all enemies any more. => cubes should dissappear and numbers that trigger "game end"/"new game" modified
-
-8) i a bit think that as we have the game now, its a bit too easy(boring). shouldnt we make it more complicated? like cube has to be hit more times? (shrinks/changes color?) or player clicking to shoot?
-
-- sure, go ahead, but we want to keep a safe version for kids who are also 8. So maybe this is one of the variables they can play with. So that both the really young ones and the 17 year olds can enjoy it.
-
-    (dont underestimate those kids, really, they are much faster than we think)
 
 9) i would do checkbox on top of screen to be able to toggle these..? (like camera / space ) (omg space invaders would be so great with this..)
 
 :D ok, I'll add it to my to do
 
-10) add 3D model of some laser gun sticking from bottom of display - thats where laser comes from! ( + change position where raycaster originates..)
-    it has small ball tip that changes color to blue when laser is shooting
-      (and after laser disappears, color goes back to neutral)
       
-11) enemies hurt player if they get close to him
+12) add Vlads github link to readme
+
 
 
 Goals & features:
 
       
-3) get video feed from the front camera and display it in a small window in the corner(like in a skype call), so that the player can see his/her reactions
+13) get video feed from the front camera and display it in a small window in the corner(like in a skype call), so that the player can see his/her reactions
 
 4) implement levels:
         1st level - in space, enemies easy to see (green, size as is now), maybe come only from one half of space (only from front)
@@ -59,6 +47,26 @@ Fixed problems:
    ## i did simple timout of 2 seconds
    
 6) ## fixed laser sound not working on mobile, also it should be a bit shorter because quick consecutive kills lack sound    
+
+7) if player doesnt shoot the cube that gets close to him, we have bug - game never ends because he cant shoot all enemies any more. => cubes should dissappear and numbers that trigger "game end"/"new game" modified
+
+8) i a bit think that as we have the game now, its a bit too easy(boring). shouldnt we make it more complicated? like cube has to be hit more times? (shrinks/changes color?) or player clicking to shoot?
+
+    - sure, go ahead, but we want to keep a safe version
+      for kids who are also 8. So maybe this is one 
+      of the variables they can play with. So that 
+      both the really young ones and the 17 year olds
+      can enjoy it.
+      
+     - dont underestimate those kids, really, 
+       they are much faster than we think)
+
+10) add 3D model of some laser gun sticking from bottom of display - thats where laser comes from! (     + change position where raycaster originates..)
+    it has small ball tip that changes color to blue when laser is shooting
+      (and after laser disappears, color goes back to neutral)
+
+11) enemies hurt player if they get close to him
+
 
 
 
@@ -95,6 +103,8 @@ some atmosphere/ ambient sounds
 Additional models:
 
 - Yellow flying thing https://sketchfab.com/models/aa38ec61007f442fa143ef0de609f62c
+
+
 
 
 

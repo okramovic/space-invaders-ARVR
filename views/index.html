@@ -10,6 +10,7 @@
     
     <link rel="stylesheet" href="/style.css">
     
+    
     <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
     
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
@@ -17,6 +18,7 @@
     <!-- a-frame library for collision detection -->
     <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.0.0/dist/aframe-physics-system.min.js"></script>
 
+    
     <script src="/video-background.js"></script>
     <script src="/hitCheck.js"></script>
     <script src="/enemyGenerator.js"></script>
@@ -25,12 +27,7 @@
     <script src="/sceneSelector.js"></script>
     
   </head>
-  <body>
-     
-    <div id="score">
-      Enemies gone: <span id="enemiesKilled">0</span>
-    </div>
-       
+  <body>  
     <a-scene physics="debug: true">
         <a-assets>
             <a-asset-item id="invader1" src="https://cdn.glitch.com/75a4acdf-fba3-4264-8ea8-b58e00438448%2FSpaceInvaderss.obj?1518897091610"></a-asset-item>
@@ -38,6 +35,7 @@
         </a-assets>
       
         <a-sky></a-sky>
+      
         <a-sphere id="space" color="#F44336" radius="0.1" position="-1 2 -1" set-sky="https://cdn.glitch.com/75a4acdf-fba3-4264-8ea8-b58e00438448%2Fsky.jpeg?1519054480736"></a-sphere>
         <a-sphere id="camera" color="#FFEB3B" radius="0.1" position="1 2 -1" set-sky="https://c2.staticflickr.com/2/1688/25044226823_53c979f8a1_k.jpg"></a-sphere>
 
@@ -69,18 +67,17 @@
         <a-sound id="chewing2" position="0 0 0" autoplay="false" volume="0.4" src="https://cdn.glitch.com/75a4acdf-fba3-4264-8ea8-b58e00438448%2Fchewing02.mp3?1519330980008"></a-sound>
       
     </a-scene>
+        <div id="score">
+              Enemies gone: <span id="enemiesKilled">0</span>
+        </div>
     
     
         <div id="lifeIndicator"></div>
     
+    
         <video id="camera-stream" autoplay></video>
     
         
-        
-<!--      <script src="/main.js"></script> -->
-<!--     <script src="/ballShooter.js"></script> -->        
-<!--     <script src="/life.js"></script> -->
-  
   </body>
 </html>
                
