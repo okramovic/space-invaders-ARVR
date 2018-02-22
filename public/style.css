@@ -1,0 +1,42 @@
+body {
+  font-family: helvetica, arial, sans-serif;
+  /*margin: 25px;*/
+}
+
+video{
+  /*--border: 1px dashed cyan;*/
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*width: 100vw;
+  /*--height: 100vh;*/
+}
+#score{
+  position: absolute;
+  top: 6px;
+  left: 0;
+  z-index: 1;
+}
+#lifeIndicator{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100vw;
+  background-color: rgba(50, 255, 0, .8);
+  z-index: 1;
+  content: ''
+}
+/*
+#shoot{
+  height: 48px;
+  width:  30vw;
+  
+  position: fixed;
+  bottom: 0;
+  left: 35vw;
+  
+  display: none;
+}
+*/
