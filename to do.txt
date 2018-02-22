@@ -1,0 +1,111 @@
+Functionality issues:
+        
+      
+2) touch function is still not yet available (working on it - ideally, it should work like this website: https://testimony.site/room)
+      
+4) a query at the very beginning to find out whether the page is being opened on a mobile device or PC(if desktop, use sky, if mobile, use camera feed instead of sky)
+    # i think id leave this for you - its quite useful skill, to set page layouts or other things according to detected display properties. (even though here its not a page layout to be set..)
+    
+    -ok  ## also you can query just screen/viewport width or height
+    
+        
+
+7) if player doesnt shoot the cube that gets close to him, we have bug - game never ends because he cant shoot all enemies any more. => cubes should dissappear and numbers that trigger "game end"/"new game" modified
+
+8) i a bit think that as we have the game now, its a bit too easy(boring). shouldnt we make it more complicated? like cube has to be hit more times? (shrinks/changes color?) or player clicking to shoot?
+
+- sure, go ahead, but we want to keep a safe version for kids who are also 8. So maybe this is one of the variables they can play with. So that both the really young ones and the 17 year olds can enjoy it.
+
+    (dont underestimate those kids, really, they are much faster than we think)
+
+9) i would do checkbox on top of screen to be able to toggle these..? (like camera / space ) (omg space invaders would be so great with this..)
+
+:D ok, I'll add it to my to do
+
+10) add 3D model of some laser gun sticking from bottom of display - thats where laser comes from! ( + change position where raycaster originates..)
+    it has small ball tip that changes color to blue when laser is shooting
+      (and after laser disappears, color goes back to neutral)
+      
+11) enemies hurt player if they get close to him
+
+
+Goals & features:
+
+      
+3) get video feed from the front camera and display it in a small window in the corner(like in a skype call), so that the player can see his/her reactions
+
+4) implement levels:
+        1st level - in space, enemies easy to see (green, size as is now), maybe come only from one half of space (only from front)
+        2nd level - palermo street (that other image you use), enemies pink 
+                    (harder to see, smaller scale), come from 360° but around equator height only (= all have similar y coordinate )
+        3rd level - your room (camera feed as background), enemies come also from top and bottom, all sides
+
+
+Fixed problems:
+
+1) camera feed stops working when entering VR Mode
+      - i believe that cant be changed/fixed - at least earlier few months ago i didnt find way in context of website (maybe native app could but i dont know making them)
+        what we do to make this look like AR is actually quite a hack and i dont think aframe people thought of this and not to say made it work in aframe too (in vr generally image for each eye is different, that s why i think video wont work there as of current state of aframe) 
+        
+        - ok, I see, thanks!
+        ## dont know how to solve
+
+3) ## added transparent cube that is being shot at/ registered by cursor
+  the alien invader object looks great, but when trying to activate it by moving the cursor over, it is not clear where the point of contact is. I only managed to activate rotation on an alien invader a couple of times, and the contact point seemed to be somewhere around the bottom right side of the object.
+   # my opinion is that these models dont have the 'material' or something to be able to be registered by cursor. i didnt manage even once to trigger the event using invaders.. i vote for not using them for first version. if you later want to use them, go ahead:)
+
+
+5) a delay of some sort before the game actually starts
+   ## i did simple timout of 2 seconds
+   
+6) ## fixed laser sound not working on mobile, also it should be a bit shorter because quick consecutive kills lack sound    
+
+
+
+
+ Ideas & resources:
+ 
+   1) when enemies are close to player, they start making some funny/horror sound
+         https://www.soundsnap.com/search/audio/horror%20sounds/score/2-5sec
+
+
+      menace (from best to less best)
+          https://www.soundsnap.com/node/46864   (would work well as subtle indicator)
+          
+          https://www.soundsnap.com/node/50868
+          
+          https://www.soundsnap.com/cbs_sk5_horror_voice_wav    (quite scary)
+          https://www.soundsnap.com/node/48335
+          https://www.soundsnap.com/bad_dreams_05_swells
+          https://www.soundsnap.com/node/60727
+          https://www.soundsnap.com/bloody_nightmare_tones_gritty_grinds_01_wav
+          https://www.soundsnap.com/bloody_nightmare_stingers_23_wav
+
+
+      warning-like
+      
+        https://www.soundsnap.com/node/47855
+
+some atmosphere/ ambient sounds
+    https://www.soundsnap.com/node/50903  (when game starts?)
+    https://www.soundsnap.com/node/52601
+    very light   https://www.soundsnap.com/node/53001
+    
+    
+Additional models:
+
+- Yellow flying thing https://sketchfab.com/models/aa38ec61007f442fa143ef0de609f62c
+
+
+
+1) to create an augmented reality showroom which displays the camera feed and superimposes all sorts of semi-scary objects that emit noises, move around manacingly, and interact with the player in limited ways(e.g. when a monster crosses 0,0,0, the phone vibrates). No shooting, no touching, just an experience(or a wicked screensaver :D)
+
+      - i would take vibration idea from this. i think i know how to use it
+      - also i would leave it up to children to change interaction goals and rules when they clone the game themselves
+      - without specific goal (shooting/defending) it will be boring in like 15 seconds...
+      
+2) to create a 3D variant of the "Alien invaders" game for mobile phones, where aliens are attacking the player from all directions by getting closer and closer. The player can touch the aliens and make them disappear. After destroying a certain number of aliens, the player wins and gets points. 
+
+      - I would go more with this as it will be easier to understand by everyone especially children that should learn to make VR stuff based on this. it also makes it easier for us to actually finish
+      
+      - ok

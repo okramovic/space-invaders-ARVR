@@ -1,0 +1,86 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>Pew them all!</title>
+    <meta name="WebVR Space invaders" content="AR shooter">
+    <link id="favicon" rel="icon" href="http://appshopper.com/blog/wp-content/uploads/2010/06/space-invaders-icon.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="/style.css">
+    
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
+    
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <!-- a-frame library for collision detection -->
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.0.0/dist/aframe-physics-system.min.js"></script>
+
+    <script src="/video-background.js"></script>
+    <script src="/hitCheck.js"></script>
+    <script src="/enemyGenerator.js"></script>
+    <script src="/main.js"></script>
+    <script src="/shooting.js"></script>
+    <script src="/sceneSelector.js"></script>
+    
+  </head>
+  <body>
+     
+    <div id="score">
+      Enemies gone: <span id="enemiesKilled">0</span>
+    </div>
+       
+    <a-scene physics="debug: true">
+        <a-assets>
+            <a-asset-item id="invader1" src="https://cdn.glitch.com/75a4acdf-fba3-4264-8ea8-b58e00438448%2FSpaceInvaderss.obj?1518897091610"></a-asset-item>
+            <a-asset-item id="invader1-mtl" src="https://cdn.glitch.com/75a4acdf-fba3-4264-8ea8-b58e00438448%2FSpaceInvaderss.mtl?1518898563070"></a-asset-item>
+        </a-assets>
+      
+        <a-sky></a-sky>
+        <a-sphere id="space" color="#F44336" radius="0.1" position="-1 2 -1" set-sky="https://cdn.glitch.com/75a4acdf-fba3-4264-8ea8-b58e00438448%2Fsky.jpeg?1519054480736"></a-sphere>
+        <a-sphere id="camera" color="#FFEB3B" radius="0.1" position="1 2 -1" set-sky="https://c2.staticflickr.com/2/1688/25044226823_53c979f8a1_k.jpg"></a-sphere>
+
+      
+        <a-camera position="0 0 -1" collider-check>
+            <a-cursor color="#4CC3D9" fuse="false" geometry="primitive: ring; radiusInner: 0.005; radiusOuter: 0.01"></a-cursor>
+            <a-entity id="myray" raycaster="objects: .collidable; showLine: false; far: 600" 
+                      line="color: #4CC3D9; opacity: 0.5;" position="-0.3 -0.5 0" rotation="0 0 0"></a-entity>
+          
+            <a-entity id="gun" geometry="primitive: cylinder; height: 0.75; radius: 0.025" material="color: gray; opacity: 0.2;"
+                      position="-0.35 -0.6 -0.7" rotation="0 -125 45">
+                  <a-entity id="guntip" geometry="primitive: sphere; radius: 0.04" material="color: gray; opacity: 0.4"
+                            position="-0.0015 0.396 -0.001"></a-entity>
+            </a-entity>
+            <a-sphere id="playerSphere" radius="0.5" material="color: white; opacity: 0.01"></a-sphere>
+          
+            <!-- original raycaster / pls dont delete yet-->
+            <!--a-entity id="myray" raycaster="objects: .collidable; showLine: false; far: 200" 
+                      line="color: #4CC3D9; opacity: 0.5;" position="0 -0.1 0" rotation="0 0 0"></a-entity-->
+        </a-camera>
+            
+        <a-entity id="player" camera="userHeight: 1.6" look-controls /><!-- collider-check -->
+  
+        <a-sound position="0 0 0" autoplay="true" loop="false" volume="0.1" src="https://cdn.glitch.com/75a4acdf-fba3-4264-8ea8-b58e00438448%2FX%20-%20Files%20Theme%20Full%20(Illuminati%20Song).mp3?1519077171187"></a-sound>
+        <a-sound position="0 0 0" autoplay="true" loop="false" volume="0.2" src="https://cdn.glitch.com/75a4acdf-fba3-4264-8ea8-b58e00438448%2FSystemsFunctional.wav?1519165180010"></a-sound>
+        
+        <a-sound id="laser01"   position="0 0 0" autoplay="false" volume="0.2" src="https://cdn.glitch.com/75a4acdf-fba3-4264-8ea8-b58e00438448%2Flaser1.mp3?1518792174882"></a-sound>
+        <a-sound id="gameover1" position="0 0 0" autoplay="false" volume="0.2" src="https://cdn.glitch.com/75a4acdf-fba3-4264-8ea8-b58e00438448%2Fgameover1.mp3?1518877726744"></a-sound>
+        <a-sound id="chewing2" position="0 0 0" autoplay="false" volume="0.4" src="https://cdn.glitch.com/75a4acdf-fba3-4264-8ea8-b58e00438448%2Fchewing02.mp3?1519330980008"></a-sound>
+      
+    </a-scene>
+    
+    
+        <div id="lifeIndicator"></div>
+    
+        <video id="camera-stream" autoplay></video>
+    
+        
+        
+<!--      <script src="/main.js"></script> -->
+<!--     <script src="/ballShooter.js"></script> -->        
+<!--     <script src="/life.js"></script> -->
+  
+  </body>
+</html>
+               

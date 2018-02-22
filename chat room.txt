@@ -1,0 +1,44 @@
+
+// btw setting sky on request is easy. you just do element.setAttribute("src or idk what", "some url")
+// and you do it in some function, no need for a-frame components
+
+// oh, didn't read this to the end
+
+// I did it. See those 2 spheres to the left and right? if you hover over them, the background changes. 
+// Still have to connect the camera though, and think of a better place for them.
+
+
+// haha, funny that street
+// but isnt it wierd to have those sphere? maybe new random background should be generated anew for each game..
+
+// i thought to have some small button or something at top right corner of page that enables user to change video to pic and reverse
+
+// sounds good, but I have to go get some sleep or I'll be a zombie at work tomorrow
+
+// sure
+// good work today!! i like how invaders seem to walk like zombies towards you
+
+
+// also i had idea, to place small sphere behing player and aliens would come only from one side => thy try to conquer the earth, but player is in the way and is defending the earth!
+// sphere that looks lik earth, you know
+
+// I like it
+// yup, I like it
+
+// also, we should find a more efficent way to communicate. This is cool, but very inefficient :D
+
+// ok, going to bed. Awesome stuff, man! Good night!
+
+// good night
+
+
+
+M:
+// that super street on earth should be second level! "while you were defending our beloved planet, they invaded it behind your back...
+// now you must fight against them in streets of Sicily"
+// 3rd level environment? your room at the moment!
+
+// in space we can have other planets orbiting around as well... just as realistic background, those kids are smart.. :)
+
+
+or those yellow and red planets could actually be 'Black holes' and serve as teleports to other spots where you have to fight too!!

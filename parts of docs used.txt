@@ -1,0 +1,28 @@
+video background
+    tutorial here http://blog.teamtreehouse.com/accessing-the-device-camera-with-getusermedia
+
+
+https://aframe.io/aframe-school/#/
+
+https://gamedevacademy.org/beginners-guide-to-a-frame/
+
+https://aframe.io/docs/0.7.0/introduction/interactions-and-controllers.html
+
+
+some help to be able to shoot at imported 3D models
+https://aframe.io/docs/0.7.0/components/material.html#built-in-materials
+
+https://github.com/ngokevin/kframe/blob/master/components/event-set/examples/basic/index.html
+
+
+detecting distance
+*  https://medium.com/samsung-internet-dev/making-my-first-webvr-game-using-a-frame-d8096bfca28
+*  https://github.com/SamsungInternet/aframe-ducks/blob/master/index.html
+
+
+
+
+not used but useful
+https://github.com/donmccurdy/aframe-physics-system
+https://github.com/donmccurdy/aframe-extras/blob/v3.3.4/src/misc/sphere-collider.js
+https://aframe.io/docs/0.7.0/introduction/entity-component-system.html#declarative-dom-based-ecs
