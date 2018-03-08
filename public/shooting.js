@@ -2,8 +2,8 @@ AFRAME.registerComponent('cursor-listener', {
     //dependencies: ['raycaster'],  // this slows down rendering and isnt needed actually
     init: function () {
         const el = this.el;
-        //el.addEventListener('mouseenter', function (evt) {
-        el.addEventListener('click', function (evt) {
+        el.addEventListener('mouseenter', function (evt) {
+        // el.addEventListener('click', function (evt) {
           
             // turn gun to blue to indicate shooting
             const gun = document.querySelector('#gun')
@@ -35,7 +35,7 @@ AFRAME.registerComponent('cursor-listener', {
           
             // update score on screen
             enemiesKilled ++
-            console.log('enemiesKilled', enemiesKilled, 'generated', enemiesGenerated) 
+            // console.log('enemiesKilled', enemiesKilled, 'generated', enemiesGenerated) 
             document.querySelector('#enemiesKilled').innerHTML = enemiesKilled
             // document.querySelector('#enemiesGenerated').innerHTML = enemiesGenerated - enemiesKilled
             

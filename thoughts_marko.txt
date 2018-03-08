@@ -1,0 +1,13 @@
+1) shooting at 3D models:
+for bodies of enemies we wanted to use some good looking 3D model available online (not much fun process to find something that looks good && can be downloaded && has proper file type). we found out after they were part of scene, that cursor doesn't emit any events like it does with simple entities like cube or sphere. Therefore we couldn't shoot at them.. Do models have no physical bodies a-frame or cursor or raycaster  requires?
+So I came up with a trick, adding child cube entity to every alien body. Cube is invisible and has always same size and position as alien - this finally enabled emitting cursor events and we can shoot at imported 3D models.
+
+2) big bang practice:
+  additional library detects the distance between player and each enemy in 3D space on each so called Tick. So when enemy is like 10 or so meters away (arbitrary choice), he hits you and you loose - easy, right?
+  but in practice, when a-frame creates the scene, at the very beginning, all entities are in point 0,0,0 together, so each enemy activates the hit trigger - sometimes several times per each enemy. So there was a need for another attribute for each enemy, that detects, that game-universe stopped expanding, all is already in its intended initial positions and game can start. So when enemies - going from coords 0,0,0 - reach limit of 10 meters distance for first time(during big bang) their "activated" attribute is set from False to True and player is ready to get hit by them later finally.
+  
+3) camera input
+How about using smartphone's back camera as input and set it as background for a-frame scene and fake an Augmented reality shooter this way? Possible if you don't need camera input also in VR mode.
+This is very small dummy trick that has nothing of capabilities of latest ARkit(iPhone) or other similar technologies that can map the outer environment, distances etc.. But it works for such basic need as we had:)
+
+this could be quite enough, no? i dont have more to say..

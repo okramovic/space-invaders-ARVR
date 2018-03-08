@@ -1,24 +1,45 @@
-// can i remove this?
-//     cube.addEventListener("onmouseover", function(){
-//       cube.setAttribute("scale","9 9 9")
-//     })
-//     cube.appendChild(animationPosition)
 
-                       
 // Randomly generates enemies at different locations, moving and rotating towards the center of scene (player) with different speeds
+// level parameter is for being able to set enemies according to level of game
 
-// gameLevel parameter is for being able to set enemies according to level of game
-function Enemy(gameLevel){
+function Enemy(level){
   
     // Formula logic: Math.floor(Math.random() * (max - min + 1)) + min;
   
-    this.x = Math.floor(Math.random() * (800 - (-300) + 1)) + (-300)
-    this.z = Math.floor(Math.random() * (800 - (-300) + 1)) + (-300)
-    this.y = Math.floor(Math.random() * (50 - (-10) + 1)) + (-10)
-  
-    this.s = Math.floor(Math.random() * (30000 - 23000 + 1)) + 23000
-    this.r = Math.floor(Math.random() * (5000 - 500 + 1)) + 500
-  
+    switch(level){
+      
+      case 1:  
+        // enemy appears only in one part of horizon, 
+        // where player intially looks (z values are negative there)
+        
+        this.x = Math.floor(Math.random() * (800 - (-300) + 1)) + (-300)
+        this.z = Math.floor(Math.random() * (-800 - (-300) + 1))// + (-300)
+        this.y = Math.floor(Math.random() * (30 - (-10) + 1)) + (-10)
+
+        this.s = Math.floor(Math.random() * (30000 - 23000 + 1)) + 25000
+        this.r = Math.floor(Math.random() * (5000 - 500 + 1)) + 500
+      break;
+        
+      // they appear on whole 360° of horizon, but not too high or low
+      case 2: 
+        this.x = Math.floor(Math.random() * (800 - (-300) + 1)) + (-300)
+        this.z = Math.floor(Math.random() * (800 - (-300) + 1)) + (-300)
+        this.y = Math.floor(Math.random() * (50 - (-10) + 1)) + (-20)
+
+        this.s = Math.floor(Math.random() * (30000 - 23000 + 1)) + 23000
+        this.r = Math.floor(Math.random() * (5000 - 500 + 1)) + 500
+      break;
+        
+      // enemies come from all sides, down and up included
+      case 3: 
+        this.x = Math.floor(Math.random() * (800 - (-300) + 1)) + (-300)
+        this.z = Math.floor(Math.random() * (800 - (-300) + 1)) + (-300)
+        this.y = Math.floor(Math.random() * (250 - (-10) + 1)) + (-200)
+
+        this.s = Math.floor(Math.random() * (30000 - 23000 + 1)) + 22000
+        this.r = Math.floor(Math.random() * (5000 - 500 + 1)) + 500
+          break;
+    }
   
     // Creates enemy-related html elements and places them in hyerarchies
   

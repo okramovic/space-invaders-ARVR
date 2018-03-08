@@ -28,6 +28,10 @@ video{
   z-index: 1;
   content: ''
 }
+#enemiesKilled{
+  font-size: 25px;
+  color: white;
+}
 /*
 #shoot{
   height: 48px;

@@ -3,23 +3,19 @@ Functionality issues:
       
 2) touch function (shooting) is still not yet available (working on it - ideally, it should work like this website: https://testimony.site/room)
       
-4) a query at the very beginning to find out whether the page is being opened on a mobile device or PC(if desktop, use sky, if mobile, use camera feed instead of sky)
-    # i think id leave this for you - its quite useful skill, to set page layouts or other things according to detected display properties. (even though here its not a page layout to be set..)
-    
-    -ok  ## also you can query just screen/viewport width or height
-
 9) i would do checkbox on top of screen to be able to toggle these..? (like camera / space ) (omg space invaders would be so great with this..)
 
 :D ok, I'll add it to my to do
 
       
-12) add Vlads github link to readme
+
 
 
 
 Goals & features:
 
-      
+14) change the name (and url of project) - i propose "invadeARs" or "invadersVR"
+
 13) get video feed from the front camera and display it in a small window in the corner(like in a skype call), so that the player can see his/her reactions
 
 4) implement levels:
@@ -64,8 +60,10 @@ Fixed problems:
 10) add 3D model of some laser gun sticking from bottom of display - thats where laser comes from! (     + change position where raycaster originates..)
     it has small ball tip that changes color to blue when laser is shooting
       (and after laser disappears, color goes back to neutral)
-
 11) enemies hurt player if they get close to him
+
+12) query at the very beginning to find out whether the page is being opened on a mobile device or PC(if desktop, use sky, if mobile, use camera feed instead of sky)
+
 
 
 

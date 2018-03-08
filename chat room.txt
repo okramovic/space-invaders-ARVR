@@ -42,3 +42,5 @@ M:
 
 
 or those yellow and red planets could actually be 'Black holes' and serve as teleports to other spots where you have to fight too!!
+
+This is a nifty idea and we can evolve forever almost. Let's implement your ever-closer idea with space, Sicily, and player's current location. After that, we send it to coder dojo and then we can do anything we want, but we need a limit so we can deliver.
